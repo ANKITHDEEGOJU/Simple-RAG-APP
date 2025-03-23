@@ -1,0 +1,12 @@
+fastapi==0.115.11
+uvicorn==0.34.0
+pypdf==5.4.0
+chromadb==0.6.3
+langchain==0.3.21
+langchain-chroma==0.2.2
+langchain-community==0.3.20
+langchain-core==0.3.45
+langchain-ollama==0.2.3
+langchain-text-splitters==0.3.7
+langdetect==1.0.9
+ollama==0.4.7

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  web:
+    build: src
+    ports:
+      - 8000:8000
+    volumes:
+      - ./src:/app/src
+    networks:
+      - ankith-net
+  ollama:
+    build: ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ankith-vol:/ollama
+    networks:
+      - ankith-net
+    entrypoint: ["/usr/bin/bash", "/pull-llama3.sh"]
+
+networks:
+  ankith-net:
+    driver: bridge
+
+volumes:
+  ankith-vol:
+    driver: local
